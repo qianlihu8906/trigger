@@ -50,7 +50,9 @@ void trigger_bool_set_action(struct trigger_bool *ab,trigger_action htol,
 
 int trigger_bool_check(struct trigger_bool *ab,char v)
 {
-	if(ab->previous == v){ if(v == 0){ if(ab->still_low != NULL)
+	if(ab->previous == v){
+	       	if(v == 0){ 
+			if(ab->still_low != NULL)
 				ab->still_low(ab);
 			return TRIGGER_BOOL_STILL_LOW;
 		}
